@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block additional %}
+    <div id="side_bar"></div>
+{% endblock %}
+{% block content %}
+    <h3>Hotels</h3>
+    <!--The div element for the map -->
+    <div id="map" style="height: 400px; width: 100%"></div>
+<script type="text/javascript">
+i = 0;
+markers = [];
+// Initialize and add the map
+function initMap() {
+  var bounds = new google.maps.LatLngBounds();
+  var infoWindow = new google.maps.InfoWindow();
+  var map = new google.maps.Map(document.getElementById('map'));
+  {% for result in results %}
+
+    var marker = new google.maps.Marker({
+    map: map,
+    position: new google.maps.LatLng({{result.latitude}}, {{result.longitude}}),
+    title: '{{result.hotel_name}}',
+    });
+
+    markers.push(marker);
+    i++;
+
+    google.maps.event.addListener(marker, 'click', (function(marker) {
+
+      return function() {
+        infoWindow.setContent("{{result.hotel_name}}");
+        infoWindow.open(map, marker);
+      }
+
+    })(marker));
+
+    bounds.extend(marker.position);
+
+  {% endfor %}
+
+  map.fitBounds(bounds);
+    $(document).ready(function(){
+    var html = "";
+    for (var i=0; i<markers.length; i++) {
+        html += '<a href="javascript:myclick(' + i + ')">' + markers[i].title + '<\/a><br>';
+        html += '<img src="{{}}" </img>'
+    }
+    document.getElementById("side_bar").innerHTML = html;
+  })
+
+}
+
+  function myclick(i) {
+    google.maps.event.trigger(markers[i],"click");
+  }
+</script>
+
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyChft_QmEvp844p8AZQbNrPjqqWX73dj_Y&callback=initMap">
+</script>
+{% endblock %}

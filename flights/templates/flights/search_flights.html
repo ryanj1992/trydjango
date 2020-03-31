@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% load static %}
+
+<script src="{% static 'js/jquery.easy-autocomplete.min.js' %}"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'css/easy-autocomplete.themes.min.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/easy-autocomplete.min.css' %}">
+
+<h2 style="color: white">Search for Flights</h2>
+<form method="post" autocomplete="off">
+    {% csrf_token %}
+    {{ form.media }}
+    <div class="row">
+    {% for field in form  %}
+      <div class="col-sm-6">
+        <label class="flight-form">{{ field.label_tag }}</label> - {{ field }}
+      </div>
+    {% endfor %}
+    <div class="col-sm-6">
+        <input id="search_flight" class='btn btn-info' type="submit" value="Search Flights!">
+    </div>
+    </div>
+</form>
+{% endblock %}

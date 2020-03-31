@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2592bb20-d1fe-40c2-be58-f843c0696db3" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1QKUrLiy8LeSa3ld8cLZXmtf8Eg" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ryanj\PycharmProjects\trydjango\trips" />
+      <recent name="C:\Users\ryanj\PycharmProjects\trydjango\static\css" />
+      <recent name="C:\Users\ryanj\PycharmProjects\trydjango\users\templates\users" />
+      <recent name="C:\Users\ryanj\PycharmProjects\trydjango\flights\templates\flights" />
+      <recent name="C:\Users\ryanj\PycharmProjects\trydjango\static" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2592bb20-d1fe-40c2-be58-f843c0696db3" name="Default Changelist" comment="" />
+      <created>1567413174195</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1567413174195</updated>
+      <workItem from="1567518996489" duration="67000" />
+      <workItem from="1567519119968" duration="4392000" />
+      <workItem from="1567564801343" duration="19753000" />
+      <workItem from="1567650823259" duration="45677000" />
+      <workItem from="1567923323772" duration="9623000" />
+      <workItem from="1568002314233" duration="60383000" />
+      <workItem from="1568244750062" duration="33617000" />
+      <workItem from="1568529248629" duration="4044000" />
+      <workItem from="1568605458925" duration="25042000" />
+      <workItem from="1568723524809" duration="1592000" />
+      <workItem from="1568769640275" duration="30126000" />
+      <workItem from="1569411479989" duration="1188000" />
+      <workItem from="1569504129648" duration="16000" />
+      <workItem from="1569932681225" duration="7536000" />
+      <workItem from="1569969354718" duration="10858000" />
+      <workItem from="1570340477536" duration="27020000" />
+      <workItem from="1571636191341" duration="91000" />
+      <workItem from="1585576281195" duration="1665000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

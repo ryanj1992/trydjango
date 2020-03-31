@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Flight Results for {{ outbound_date }}</h2>
+{% for data in results.data %}
+<div class="row wrapper-flight-margin">
+    <div class="wrapper-flight col-md-8">
+        {% for itineraries in data.itineraries %}
+        {% for segments in itineraries.segments %}
+        <div class="row" id="flight-box">
+            <div class="carrier-code" id="carrier-code{{forloop.parentloop.parentloop.counter}}">{{ segments.carrierCode }}
+            </div>
+            <div id="dep-details">
+                <div id="dep-time{{forloop.parentloop.parentloop.counter}}">
+                    <h4 class="dep-time">{{segments.departure.at|slice:"11:16"}}</h4>
+                </div>
+                <div id="dep-place{{forloop.parentloop.parentloop.counter}}" style="float: right">{{ segments.departure.iataCode }}</div>
+            </div>
+            <div id="flight-info">
+                <div class="flight-time" id="flight-time{{forloop.parentloop.parentloop.counter}}">{{ segments.duration|slice:"2:" }}</div>
+                <div class="flight-time">-----------<i class="fas fa-plane"></i></div>
+                <div class= "flight-time" data-toggle="tooltip" data-placement="bottom" title="tooltip on bottom" id="flight-stops{{forloop.parentloop.parentloop.counter}}"><a href="#">{{segments.numberOfStops}} Stops</a></div>
+            </div>
+            <div id="arrival-details">
+                <div id="arrival-time{{forloop.parentloop.parentloop.counter}}">
+                    <h4 class="arrival-time">{{segments.arrival.at|slice:"11:16"}}</h4>
+                </div>
+                <div id="arrival-place{{forloop.parentloop.parentloop.counter}}">{{ segments.arrival.iataCode }}</div>
+            </div>
+        </div>
+        {% endfor %}
+        {% endfor %}
+    </div>
+    <div id="flight-price" class="col-md-4">
+      <div class="text-price">
+        <button id="{{forloop.counter}}" onClick="ajax_request(this.id)" style="font-weight: 600; font-size: 20px" class="btn btn-info add-flight"><i class="fas fa-pound-sign"></i>&nbsp;{{ data.price.total }}
+        <i class="fas fa-arrow-circle-right"></i>
+        </button>
+      </div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}

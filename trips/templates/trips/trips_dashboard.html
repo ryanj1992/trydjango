@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container" id="content">
+    <div class="row">
+        <div class="col-md-12"><h2 style="margin-bottom: 20px">My Trips</h2></div>
+        {% for trip in trips %}
+        <div class="col-md-6">
+            <div class="card" style="width: 18rem;">
+                <img src="{{trip.imgUrl}}" width="200" height="200" class="card-img-top">
+                <div class="card-body">
+                    <a href="{% url 'trip-detail' trip.id %}" class="btn btn-primary">{{trip.travelLocation}}</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

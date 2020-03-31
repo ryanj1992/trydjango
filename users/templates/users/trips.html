@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div>
+        <h2>Your Upcoming Trips</h2>
+    </div>
+    {% if not user_flights %}
+        <p>You have no upcoming trips, book one <a href="{% url 'flights' %}">here!</a> </p>
+    {% else %}
+    {% for flight in user_flights %}
+    <div class="row flight-box" id="flight-box">
+        <div class="carrier-code" id="carrier-code">{{ flight.carrier }}</div>
+        <div class="dep-details" id="dep-details">
+            <div id="dep-time">{{ flight.departureDate }}</div>
+            <div id="dep-place">{{ flight.departurePlace }}</div>
+        </div>
+        <div class="flight-info" id="flight-info">
+            <div id="flight-time">{{ flight.duration }}</div>
+            <div id="flight-stops">{{ flight.numberOfStops}}</div>
+        </div>
+        <div class="arrival-details" id="arrival-details">
+            <div id="arrival-time">{{ flight.arrivalDate }}</div>
+            <div id="arrival-place">{{ flight.arrivalPlace }}</div>
+        </div>
+        <div class="flight-price" id="flight-price">
+            <input type="submit" id="button_1" class="btn btn-info">
+        </div>
+    </div>
+{% endfor %}
+{% endif %}
+{% endblock %}

@@ -1,4 +1,1 @@
-martor
-gunicorn
-django-crispy-forms
-django-bootstrap-datepicker-plus
+pillow

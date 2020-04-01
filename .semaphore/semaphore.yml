@@ -30,7 +30,7 @@ blocks:
             - cd trydjango
             - python manage.py makemigrations
             - python manage.py migrate
-            - python manage.py test
+            - python manage.py flights/test
         - name: Checklist
           commands:
             - cd trydjango

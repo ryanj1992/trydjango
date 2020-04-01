@@ -27,13 +27,11 @@ blocks:
       jobs:
         - name: Unit Tests
           commands:
-            - cd trydjango
             - python manage.py makemigrations
             - python manage.py migrate
             - python manage.py flights/test
         - name: Checklist
           commands:
-            - cd trydjango
             - python manage.py check --deploy
         - name: Style Check
           commands:
